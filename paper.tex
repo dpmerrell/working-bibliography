@@ -4,9 +4,11 @@
 \usepackage{ragged2e}
 \usepackage{hyperref}
 \usepackage{amsmath}
-\usepackage{amsfonts}
+%\usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{color}
+\usepackage[round]{natbib}
+
 
 \date{}
 \setlength{\topmargin}{0pt}
@@ -21,7 +23,7 @@
 \renewcommand*\rmdefault{ppl}
 \setlength{\parindent}{0.0in}
 \setlength{\parskip}{14pt plus4pt minus4pt}
-\renewcommand{\baselinestretch}{1.25}
+%\renewcommand{\baselinestretch}{1.25}
 
 
 \begin{document}
@@ -32,16 +34,85 @@
 
 \maketitle{}
 
-
-
 \thispagestyle{empty}
 
 
-\bibliographystyle{acm}
+\section{Signaling pathway network inference}
+
+\subsection{Constraint-based approaches}
+
+\paragraph{ \citet{2018-koksal-tps}. Temporal Pathway Synthesizer (TPS). }
+
+
+
+
+\subsection{Dynamic Bayesian Network (DBN) approaches}
+
+\paragraph{ \citet{2017-hill-context}. Context specificity \ldots phosphoprotein profiling.}
+The authors build on their previous works 
+\citep{2015-spencer-interventional} 
+\citep{2014-oates-joint}
+to infer context-specific signaling pathways from phosphorylation data.
+They consider (4 cell lines) $\times$ (8 perturbagens) $=$ 32 different contexts.
+For each context they apply 6 different kinase inhibitor interventions, and incorporate the resulting causal information into their context-specific pathway reconstruction.
+\citeauthor{2017-hill-context} validate the novel edges predicted by their method through western blot analysis.
+
+\paragraph{ \citet{2015-spencer-interventional}. Inferring networks from interventional data.}
+
+\paragraph{ \citet{2014-oates-joint}. Joint estimation of multiple related biological networks.}
+The authors present a method for inferring multiple related networks simultaneously.
+They do so by defining a hierarchical model whose leaves are networks;
+they infer the network posteriors via belief propagation.
+The results are exact, since the networks' parameters can be marginalized exactly and the hierarchical model contains no loops. 
+
+\paragraph{ \citet{hill-bayesian-2012} Bayesian inference of signaling network topology.}
+
+
+
+
+\subsection{Belief Propagation/Prize-Collecting Steiner Tree approaches}
+
+\paragraph{ \citet{2013-molinelli-perturbation}. Inferring networks for perturbed cells.}
+The authors use the belief-propagation method described by \citeauthor{2012-biazzo-steiner} to infer 
+MUST REREAD --- DO NOT YET FULLY GRASP THIS ONE.
+
+\paragraph{ \citet{2012-biazzo-steiner}. Performance of a cavity-method-based algorithm for the prize-collecting Steiner tree problem on graphs.}
+The authors explain how the PCST objective function can be regarded as a log-probability over trees, and then maximize it (approximately) using a belief-propagation algorithm.
+They show that it compares favorably against other PCST solvers---typically based on integer program formulations---on a standard set of PCST benchmarks.
+Their method usually converges faster \emph{and} attains higher scores than the others.
+
+\paragraph{ \citet{2011-bailly-bechet-belief}. Finding undetected protein associations in cell signaling by belief propagation.}
+
+
+
+
+\subsection{Other Works}
+
+\paragraph{ \citet{2018-invergo-review}. Review of phosphorylation network reconstruction methods. }
+
+\paragraph{ \citet{2016-hill-community}. Inferring causal molecular networks \ldots community-based effort.}
+
+\paragraph{ \citet{2008-mukherjee-priors}. Network inference using informative priors.}
+The authors describe the network inference task and present a family of prior distributions for networks:
+$ P(G) \propto \exp\left( \lambda \sum_i w_i f_i(G) \right).$ 
+That is, the probability of a graph is some log-linear function of various graph features. 
+\citeauthor{2008-mukherjee-priors} use this family of priors in conjunction with 
+(a) exact marginal likelihood $P(X | G) = \int P(X | G, \theta) P(\theta) d\theta$, and
+(b) MCMC sampling
+to estimate expectations of features in the posterior network.
+They evaluate their inference method via 
+\begin{enumerate}
+    \item a simulation study; they estimate the probabilities of edge existence in the posterior network
+        and generate an ROC curve for these predictions.
+    \item reconstructing a signaling pathway from phosphorylation data; they compare the most likely
+        graph against expert knowledge of this particular pathway.
+\end{enumerate}
+
+\paragraph{ \citet{2010-vaske-paradigm}. Patient-specific pathway activities from multi-omic data.}
+
+\bibliographystyle{plainnat}
 \bibliography{biblio}
 
 \pagebreak
-
-
 
 \end{document}
