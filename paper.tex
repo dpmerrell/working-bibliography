@@ -66,8 +66,13 @@ they infer the network posteriors via belief propagation.
 The results are exact, since the networks' parameters can be marginalized exactly and the hierarchical model contains no loops. 
 
 \paragraph{ \citet{hill-bayesian-2012} Bayesian inference of signaling network topology.}
-
-
+The authors present an exact Bayesian inference method for signaling pathways.
+They use DBNs to represent the causal dependencies of phosphorylation events.
+The strength of a DBN representation is that it leads to a straightforward Bayesian formulation:
+$P(G|X) \propto \int P(X|G, \theta) \cdot P(G) \cdot P(\theta) d\theta$, where $P(X|G, \theta)$ is
+simply the probability of the data given a particular DBN.
+The authors also show that suitable priors $P(G)$ and $P(\theta)$ reduce the posterior $P(G|X)$
+to a tractable sum (polynomial number of terms---the polynomial degree is given by an in-degree constraint on $G$).
 
 
 \subsection{Belief Propagation/Prize-Collecting Steiner Tree approaches}
@@ -91,6 +96,12 @@ Their method usually converges faster \emph{and} attains higher scores than the 
 \paragraph{ \citet{2018-invergo-review}. Review of phosphorylation network reconstruction methods. }
 
 \paragraph{ \citet{2016-hill-community}. Inferring causal molecular networks \ldots community-based effort.}
+This paper describes the outcomes of a phosphorylation network reconstruction DREAM challenge.
+Participants attempted to infer context-specific causal signaling networks from (a) simulated data and (b) real phosphorylation time-series measurements.
+The participants submitted their networks, which were evaluated against held-out test sets.
+The challenge evaluated a very particular notion of causality---i.e., two phosphorylation events ought to be causally related iff there exists a directed path from one to the other in the inferred network.
+Two submissions reliably attained the highest scores; one was based on a notion of Granger causality and the other was based on a nonparametric hypothesis test for functional dependence of variables.
+The latter did not even make use of prior biological knowledge (e.g., pathway databases curated by scientists).
 
 \paragraph{ \citet{2008-mukherjee-priors}. Network inference using informative priors.}
 The authors describe the network inference task and present a family of prior distributions for networks:
