@@ -1,3 +1,5 @@
+# TeX garbage
 *.log
 *.aux
 *.pdf
+*.out
