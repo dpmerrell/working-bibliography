@@ -36,6 +36,25 @@
 
 \thispagestyle{empty}
 
+\section{Probabilistic Programming}
+
+\subsection{Probabilistic Metaprogramming}
+
+\paragraph{\citet{saad-synthesis-2019}. Bayesian Synthesis of Probabilistic Programs.}
+The authors describe a Bayesian framework for synthesizing probabilistic programs for data modeling tasks.
+They use probabilistic context-free grammars to define prior distributions over domain-specific probabilistic programming languages.
+They define domain-specific code transformations that enable MCMC sampling from the posterior distribution of programs.
+They implement their framework using the Venture PPL, and demonstrate it on two tasks: (1) Gaussian process time-series regression and (2) nonparametric mixture modeling. 
+
+\subsection{The \texttt{Gen} language}
+
+\paragraph{\citet{cusumano-gen-2018}. Gen: A General-Purpose PPL with Programmable Inference.}
+\texttt{Gen} is a probabilistic programming language implemented in Julia.
+It differs from other PPLs in that it does not attempt to hide inference from the user---instead,
+\texttt{Gen} attempts to make it easier for users to compose their own inference methods.
+It does so by providing a concise interface for operating on program traces, along with a library of standard inference methods.
+The authors compare \texttt{Gen}'s performance against other PPLs on a variety of tasks, including (a) robust Bayesian regression, (b) Gaussian process structure learning, (c) estimating 3D body poses from depth images, and (d) nonlinear state-space modeling.
+Most of the well-known languages (e.g., Stan, Edward, Pyro) were not even capable of attempting all these tasks, due to their limited expressiveness (e.g., Stan's being tightly bound to hierarchical models and Pyro's focus on deep generative modeling). 
 
 \section{Signaling pathway network inference}
 
