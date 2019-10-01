@@ -94,6 +94,16 @@ The authors also show that suitable priors $P(G)$ and $P(\theta)$ reduce the pos
 to a tractable sum (polynomial number of terms---the polynomial degree is given by an in-degree constraint on $G$).
 
 \paragraph{ \citet{2010-robinson-nsdbn} Non-stationary DBNs.}
+The authors describe a DBN variant which allows the network structure
+to change at distinct ``breakpoints'' (my term, not theirs) in time.
+They give model estimation methods for three settings: (1) known number of breakpoints/known times of breakpoints; (2) known number, unknown times; and (3) unknown number, unknown times.
+The methods are MCMC-based---sampling takes place over the space of possible DBNs (and breakpoint parameters, when the setting calls for it).
+The methods are able to identify the underlying model in a simulation involving 5000 observations of 100 random variables, with 4 breakpoints.
+The authors then apply their methods to real-world datasets: gene regulation in fruit fly muscle development, and brain signals in birds.
+Inference for a large problem instance entails compute times on the order of minutes for 100,000 samples.
+
+
+
 
 \subsection{Belief Propagation/Prize-Collecting Steiner Tree approaches}
 
