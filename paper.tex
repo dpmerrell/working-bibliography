@@ -40,6 +40,13 @@
 
 \subsection{Probabilistic Metaprogramming}
 
+\paragraph{\citet{lake-bpl-2015}. Probabilistic Program Induction.}
+The authors use probabilistic programs to model hand-written characters.
+They use hierarchical priors over those programs, in order to infer programs that best explain a given character.
+This system is used to generate new samples that imitate the given sample, in a one-shot fashion.
+That is, the system successfully learns the generative concept for one example character, and then employs that concept to produce new samples and perform classification tasks.
+The system classifies characters at human levels of accuracy, and produces samples that are indistinguishable from those written by humans (this was demonstrated in via Amazon Mechanical Turk). 
+
 \paragraph{\citet{saad-synthesis-2019}. Bayesian Synthesis of Probabilistic Programs.}
 The authors describe a Bayesian framework for synthesizing probabilistic programs for data modeling tasks.
 They use probabilistic context-free grammars to define prior distributions over domain-specific probabilistic programming languages.
