@@ -25,10 +25,11 @@
 @book{gelman-text-2014,
 	title={Bayesian Data Analysis},
 	author={Gelman, Andrew and Carlin, John B. and Stern, Hal S. and Dunson, David B. and Vehtari, Aki and Rubin, Donald B.},
-	year={2013},
+	year={2014},
 	publisher={CRC Press},
 	edition=3
 }
+
 
 %%%%%% Probabilistic Programming %%%%%%%%%%%%%
 
@@ -60,13 +61,51 @@
  address = {New York, NY, USA},
  keywords = {Markov chain Monte Carlo, Probabilistic programming, sequential Monte Carlo, variational inference},
 } 
- %isbn = {978-1-4503-6712-7},
- %location = {Phoenix, AZ, USA},
- %pages = {221--236},
- %numpages = {16},
- %url = {http://doi.acm.org/10.1145/3314221.3314642},
- %doi = {10.1145/3314221.3314642},
- %acmid = {3314642},
+
+
+@article{carpenter-stan-2017,
+    doi = {10.18637/jss.v076.i01},
+    url = {https://doi.org/10.18637/jss.v076.i01},
+    year = {2017},
+    publisher = {Foundation for Open Access Statistics},
+    volume = {76},
+    number = {1},
+    author = {Bob Carpenter and Andrew Gelman and Matthew D. Hoffman and Daniel Lee and Ben Goodrich and Michael Betancourt and Marcus Brubaker and Jiqiang Guo and Peter Li and Allen Riddell},
+    title = {Stan: A Probabilistic Programming Language},
+    journal = {Journal of Statistical Software}
+}
+
+
+@misc{dillon-tfp-2017,
+    title={TensorFlow Distributions},
+    author={Joshua V. Dillon and Ian Langmore and Dustin Tran and Eugene Brevdo and Srinivas Vasudevan and Dave Moore and Brian Patton and Alex Alemi and Matt Hoffman and Rif A. Saurous},
+    year={2017},
+    eprint={1711.10604},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
+}
+
+@article{bingham-pyro-2018,
+    author = {Bingham, Eli and Chen, Jonathan P. and Jankowiak, Martin and Obermeyer, Fritz and
+                  Pradhan, Neeraj and Karaletsos, Theofanis and Singh, Rohit and Szerlip, Paul and
+                                Horsfall, Paul and Goodman, Noah D.},
+    title = {{Pyro: Deep Universal Probabilistic Programming}},
+    journal = {Journal of Machine Learning Research},
+    year = {2018}
+}
+
+@article{salvatier-pymc3-2016,
+    doi = {10.7717/peerj-cs.55},
+    url = {https://doi.org/10.7717/peerj-cs.55},
+    year = {2016},
+    month = apr,
+    publisher = {{PeerJ}},
+    volume = {2},
+    pages = {e55},
+    author = {John Salvatier and Thomas V. Wiecki and Christopher Fonnesbeck},
+    title = {Probabilistic programming in Python using {PyMC}3},
+    journal = {{PeerJ} Computer Science}
+}
 
 
 %%%%%% Network Inference %%%%%
@@ -219,6 +258,29 @@
     publisher={American Physical Society}
 }
 
+@article{carlin-prophetic-2017,
+    doi = {10.1371/journal.pone.0170340},
+    url = {https://doi.org/10.1371/journal.pone.0170340},
+    year = {2017},
+    month = dec,
+    publisher = {Public Library of Science ({PLoS})},
+    volume = {12},
+    number = {12},
+    pages = {e0170340},
+    author = {Daniel E. Carlin and Evan O. Paull and Kiley Graim and Christopher K. Wong and Adrian Bivol and Peter Ryabinin and Kyle Ellrott and Artem Sokolov and Joshua M. Stuart},
+    editor = {Frank Emmert-Streib},
+    title = {Prophetic Granger Causality to infer gene regulatory networks},
+    journal = {{PLOS} {ONE}}
+}
+
+@misc{zhang-funchisq-2013,
+    title={Deciphering Interactions in Causal Networks without Parametric Assumptions},
+    author={Yang Zhang and Mingzhou Song},
+    year={2013},
+    eprint={1311.2707},
+    archivePrefix={arXiv},
+    primaryClass={q-bio.MN}
+}
 
 %%%%%%% DREAM stuff %%%%%%%%%%%%%%
 @article{2016-cokelaer-dreamtools,
@@ -228,101 +290,6 @@
     year={2016}
 }
 
-
-%%%%%% OLD STUFF %%%%%%%%
-
-@article{2017vaandragermodel,
-  title={Model Learning},
-  author={Vaandrager, Frits},
-  journal={Communications of the ACM},
-  volume={60},
-  number={02},
-  pages={86--95},
-  year={2017},
-  publisher={ACM}
-}
-
-@article{2015-dantoni-automatic,
-  title={How Can Automatic Feedback Help Students Construct Automata?},
-  author={D'Antoni, Loris and Kini, Dileep and Alur, Rajeev and Gulwani, Sumit and Viswanathan, Mahesh and Hartmann, Bj\"orn},
-  journal={ACM Transactions on Computer-Human Interaction},
-  volume={22},
-  number={02},
-  year={2015},
-}
-
-@article{googletranslate,
-  author    = {Wu, Yonghui and Schuster, Mike and Chen, Zhifeng and V. Le, Quoc and Norouzi, Mohammad},
-  title     = {Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation},
-  journal   = {arXiv:1609.08144v2},
-  year      = {2016},
-
-}
-
-@inproceedings{karpathycaption,
-  title={Deep Visual-Semantic Alignments for Generating Image Descriptions},
-  author={Karpathy, Andrej and Fei-fei, Li},
-  booktitle={CVPR},
-  year={2015}
-}
-
-@inproceedings{rotations,
-  title={Weighted Model Integration with Orthogonal Transformations},
-  author={Merrell, David and Albarghouthi, Aws and D'Antoni, Loris},
-  booktitle={IJCAI},
-  year={2017}
-}
-
-@inproceedings{fairsquare,
-  title={FairSquare: Probabilistic Verification for Program Fairness},
-  author={Albarghouthi, Aws and D'Antoni, Loris and Drews, Samuel and Nori, Aditya},
-  booktitle={OOPSLA},
-  year={2017}
-}
-
-@inproceedings{slang,
-  title={Code Completion with Statistical Language Models},
-  author={Raychev, Veselin and Vechev, Martin and Yahav, Eran},
-  booktitle={PLDI},
-  year={2014}
-}
-
-
-@article{angluin,
-  title={Learning Regular Sets from Queries and Counterexamples},
-  author={Angluin, Dana},
-  journal={Information and Computation},
-  volume={75},
-  number={2},
-  pages={87-106},
-  year={1987},
-  publisher={}
-}
-
-@article{aarts,
-  title={Generating models of infinite-state communication protocols using regular inference with abstraction},
-  author={Aarts, Fides and Jonsson, Bengt and Uijen, Johan},
-  journal={Formal Methods in System Design},
-  volume={46},
-  number={1},
-  pages={1-41},
-  year={2015},
-  publisher={}
-}
-
-@misc{gdpr,
-    title={General Data Protection Regulation},
-    author={{Council of the European Union}},
-    year={2016},
-    note={\newline\url{http://data.consilium.europa.eu/doc/document/ST-5419-2016-INIT/en/pdf}}
-}
-
-@misc{udacity,
-    title={Using Deep Learning to Predict Steering Angles},
-    author={Cameron, Oliver},
-    year={2016},
-    note={\newline\url{https://medium.com/udacity/challenge-2-using-deep-learning-to-predict-steering-angles-f42004a36ff3}}
-}
 
 
 %%%%%%% Signaling and motivation %%%%%%%%%%%%%%
@@ -410,3 +377,21 @@
 	year = {2009},
 	pages = {140--146}
 }
+
+%%%%%%%%%%%%% ML Methodology %%%%%%%%%%%%%%%%%%
+
+@inproceedings{davis-pr-roc-2006,
+  title={The relationship between precision-recall and {ROC} curves},
+  author={Davis, Jesse and Goadrich, Mark},
+  booktitle={Proceedings of the 23rd International Conference on Machine Learning},
+  year={2006}
+}
+
+@inproceedings{flach-pr-2015,
+  title={Precision-recall-gain curves: {PR} analysis done right},
+  author={Flach, Peter A. and Kull, Meelis},
+  booktitle={Advances in neural information processing systems},
+  year={2015}
+}
+
+
